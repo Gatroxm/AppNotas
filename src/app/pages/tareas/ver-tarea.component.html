@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">{{tarea['nombre']}}</h4>
+                <hr>
+                <p><strong>Prioridad: </strong><span [ngClass]="{'badge-danger': tarea['prioridad'] === 'Alta', 'badge-warning': tarea['prioridad'] === 'Media', 'badge-info': tarea['prioridad'] === 'Baja'}" class="badge">{{tarea.prioridad}}</span></p>
+                <p><strong>Fecha de creación: {{tarea['fechaCreacion']}}</strong></p>
+                <p><strong>Fecha de vencimiento: {{tarea['fechaVencimiento']}}</strong></p>
+                <p><strong>Estado: {{tarea['estadoTarea']}}</strong></p>
+                <p><strong>Usuario Creador: {{tarea['autor']}}</strong></p>
+                <p><strong>Usuatio Asignado: {{tarea['asignadoA']}}</strong></p>
+                <hr>
+                <a routerLink="/tareas" class="btn btn-primary">Regresar</a>
+            </div>
+        </div>
+    </div>
+</div>

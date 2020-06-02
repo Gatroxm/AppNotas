@@ -4,28 +4,24 @@
 <section id="wrapper" class="login-register login-sidebar" style="background-image:url(../assets/images/background/login-register.jpg);">
     <div class="login-box card">
         <div class="card-body">
-            <form class="form-horizontal form-material" (ngSubmit)="ingresar()">
+            <form ngNativeValidate #f="ngForm" class="form-horizontal form-material" (ngSubmit)="ingresar(f)">
                 <a href="javascript:void(0)" class="text-center db">App Tareas</a>
                 <div class="form-group m-t-40">
                     <div class="col-xs-12">
-                        <input class="form-control" type="text" placeholder="Usuario">
+                        <input ngModel name="email" class="form-control" type="email" placeholder="Correo del usuario" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-xs-12">
-                        <input class="form-control" type="password" placeholder="Contraseña">
+                        <input ngModel name="password" class="form-control" type="password" placeholder="Contraseña" required>
                     </div>
+                </div>
+                <div class="form-group" *ngIf="valida">
+                    <p class="text-danger">El usuario o la contraseña son invalidos</p>
                 </div>
                 <div class="form-group text-center m-t-20">
                     <div class="col-xs-12">
                         <button class="btn btn-info btn-lg btn-block text-uppercase btn-rounded" type="submit">Iniciar seción</button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
-                        <div class="social">
-                            <a href="javascript:void(0)" class="btn btn-googleplus" data-toggle="tooltip" title="Iniciar con Google"> <i aria-hidden="true" class="fa fa-google-plus"></i> </a>
-                        </div>
                     </div>
                 </div>
             </form>
@@ -35,3 +31,4 @@
 <!-- ============================================================== -->
 <!-- End Wrapper -->
 <!-- ============================================================== -->
+<footer class="footer"> © 2020 Gustavo Muñoz Reyes</footer>

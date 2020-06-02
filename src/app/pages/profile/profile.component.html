@@ -1,0 +1,40 @@
+<!-- ============================================================== -->
+<!-- Container fluid  -->
+<!-- ============================================================== -->
+<div class="container-fluid">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="row page-titles">
+        <div class="col-md-5 align-self-center">
+            <h3 class="text-themecolor">Perfil del usuario</h3>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content -->
+    <!-- ============================================================== -->
+    <!-- Row -->
+    <div class="row justify-content-center">
+        <!-- Column -->
+        <div class="col-lg-4 col-xlg-3 col-md-5">
+            <div class="card">
+                <div class="card-body text-center">
+                    <div class="m-t-30"> <img src="../assets/images/users/5.jpg" class="img-circle" width="150" />
+                        <h4 class="card-title m-t-10">{{ usuarioLogin['nombre'] }}</h4>
+                        <h6 class="card-subtitle"><strong>Correo: {{ usuarioLogin['email'] }}</strong></h6>
+                        <h6 class="card-subtitle"><strong>Rol: <span *ngIf="usuarioLogin['role'] === 'ADMIN_ROLE' ">Administrador</span> <span *ngIf="usuarioLogin['role'] != 'ADMIN_ROLE' ">Usuario</span></strong></h6>
+                        <h6 class="card-subtitle"><strong>Estado: <span *ngIf="usuarioLogin['estado']">Activo</span> <span *ngIf="!usuarioLogin['estado']">In Activo</span></strong></h6>
+                        <a routerLink="/acount-settings" class="btn btn-primary">Ajustes del Tema</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Row -->
+    <!-- ============================================================== -->
+    <!-- End PAge Content -->
+    <!-- ============================================================== -->

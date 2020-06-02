@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Crear Usuarios</h4>
+                <form ngNativeValidate [formGroup]="forma" (ngSubmit)="creaUsuario();" class="form-material m-t-40">
+                    <div class="form-group">
+                        <label>Nombre </label>
+                        <input [formControlName]="'nombre'" name="nombre" required type="text" class="form-control form-control-line" placeholder="Nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="example-email">Correo <span class="help"> e.g. "example@gmail.com"</span></label>
+                        <input type="email" id="example-email2" required [formControlName]="'email'" name="email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label>Contraseña</label>
+                        <input [formControlName]="'password'" name="password" required type="password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Repetir Contraseña</label>
+                        <input [formControlName]="'password2'" name="password2" required type="password" class="form-control">
+                    </div>
+                    <div class="form-group" *ngIf="forma.errors?.sonIguales && !forma.pristine">
+                        <p class="text-danger">Las contraseñas Deben ser iguales</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Rol</label>
+                        <select [formControlName]="'role'" class="form-control">
+                            <option value="ADMIN_ROLE">Administrador</option>
+                            <option value="USER_ROLE">Usuario</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label></label>
+                        <button type="submit" class="btn btn-outline-primary">Crear Usuario</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

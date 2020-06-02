@@ -10,10 +10,24 @@ export class SidebarService {
       titulo: 'Principal',
       icono: 'mdi mdi-gauge',
       submenu: [
-        {titulo: 'Dashboard', url: '/dashboard'},
-        {titulo: 'Usuarios', url: '/usuarios'},
-        {titulo: 'Tareas', url: '/tareas'},
-        {titulo: 'Ajustes', url: '/acount-settings'},
+        {titulo: 'Inicio', url: '/welcome'},
+        {titulo: 'Ajustes', url: '/acount-settings'}
+      ]
+    },
+    {
+      titulo: 'Usuarios',
+      icono: 'mdi mdi-account-box',
+      submenu:[
+        {titulo: 'Crear', url: '/crear-usuario'},
+        {titulo: 'Listar', url: '/usuarios'},
+      ]
+    },
+    {
+      titulo: 'Tareas',
+      icono: 'mdi mdi-format-line-weight',
+      submenu:[
+        {titulo: 'Crear', url: '/crear-tarea'},
+        {titulo: 'Listar', url: '/tareas'},
       ]
     },
   ];

@@ -21,10 +21,6 @@ let usuarioSchema = Schema({
         type: String,
         require: [true, 'La contraseña es obligatoria']
     },
-    img: {
-        type: String,
-        require: false
-    },
     role: {
         type: String,
         default: 'USER_ROLE',
@@ -33,10 +29,6 @@ let usuarioSchema = Schema({
     estado: {
         type: Boolean,
         default: true
-    },
-    google: {
-        type: Boolean,
-        default: false
     },
 
 });
