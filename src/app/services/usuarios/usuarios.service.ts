@@ -57,7 +57,6 @@ export class UsuariosService {
   }
   actualizarUsuario( usuario: Usuario, id: string ) {
     const url = URL_servicios + '/usuario/' + id;
-    console.log(usuario)
     return this.http.put(url, usuario).pipe(map( (resp: any) => {
       return resp.usuario;
     }));
