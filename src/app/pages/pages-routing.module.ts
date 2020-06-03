@@ -26,7 +26,7 @@ const pagesRoutes: Routes = [
         path: 'welcome',
         component: WelcomeComponent,
         data: {
-          titulo: 'Bienbenida'
+          titulo: 'Bienvenid@'
         }
       },
       {

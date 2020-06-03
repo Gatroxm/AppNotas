@@ -11,8 +11,6 @@ app.get('/usuario', (req, res) => {
     desde = Number(desde);
     limite = Number(limite);
     Usuario.find({}, 'nombre email role estado')
-        .skip(desde)
-        .limit(limite)
         .exec((err, usuarios) => {
             if (err) {
                 return res.status(400).json({
